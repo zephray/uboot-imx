@@ -1,0 +1,6 @@
+Archer
+M:	Wenting Zhang <zephray@outlook.com>
+S:	Maintained
+F:	board/ei2030/archer
+F:	include/configs/archer.h
+F:	configs/archer_defconfig

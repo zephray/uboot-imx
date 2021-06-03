@@ -114,12 +114,20 @@ config TARGET_COLIBRI_IMX7
 	select DM_THERMAL
 	imply CMD_DM
 
+config TARGET_ARCHER
+	bool "Support Archer"
+	select BOARD_LATE_INIT
+    select MX7D
+    select DM
+    select DM_THERMAL
+
 endchoice
 
 config SYS_SOC
 	default "mx7"
 
 source "board/compulab/cl-som-imx7/Kconfig"
+source "board/ei2030/archer/Kconfig"
 source "board/freescale/mx7dsabresd/Kconfig"
 source "board/freescale/mx7d_12x12_lpddr3_val/Kconfig"
 source "board/freescale/mx7d_12x12_ddr3_val/Kconfig"

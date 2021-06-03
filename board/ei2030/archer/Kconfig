@@ -1,0 +1,15 @@
+if TARGET_ARCHER
+
+config SYS_BOARD
+	default "archer"
+
+config SYS_VENDOR
+	default "ei2030"
+
+config SYS_CONFIG_NAME
+	default "archer"
+
+config SYS_TEXT_BASE
+	default 0x87800000
+
+endif

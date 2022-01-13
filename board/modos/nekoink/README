@@ -1,0 +1,18 @@
+How to use U-Boot on NekoInk
+----------------------------
+
+- First make sure you have installed the dtc package (device tree compiler):
+
+$ sudo apt-get install device-tree-compiler
+
+- Build U-Boot for NekoInk
+
+$ make mrproper
+$ make nekoink_defconfig
+$ make
+
+This generates the u-boot-dtb.imx image in the current directory.
+
+- Flash the u-boot-dtb.imx image into the micro SD card:
+
+$ sudo dd if=u-boot-dtb.imx of=/dev/sdb bs=1K seek=1 && sync

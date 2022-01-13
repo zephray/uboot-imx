@@ -1,0 +1,14 @@
+if TARGET_NEKOINK
+
+config SYS_BOARD
+	default "nekoink"
+
+config SYS_VENDOR
+	default "modos"
+
+config SYS_CONFIG_NAME
+	default "nekoink"
+
+config SYS_TEXT_BASE
+	default 0x87800000
+endif

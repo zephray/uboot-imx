@@ -835,6 +835,16 @@ config TARGET_BRPPT2
           Support
           B&R BRPPT2 platform
           based on Freescale's iMX6 SoC
+
+config TARGET_NEKOINK
+	bool "NekoInk"
+	select MX6ULL
+	select BOARD_LATE_INIT
+	select DM
+	select DM_THERMAL
+	select DM_I2C
+	select SUPPORT_SPL
+	imply CMD_DM
 endchoice
 
 config SYS_SOC
@@ -900,5 +910,6 @@ source "board/udoo/neo/Kconfig"
 source "board/wandboard/Kconfig"
 source "board/warp/Kconfig"
 source "board/BuR/brppt2/Kconfig"
+source "board/modos/nekoink/Kconfig"
 
 endif

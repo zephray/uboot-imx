@@ -1,0 +1,6 @@
+NEKOINK BOARD
+M:	Wenting Zhang <wenting@modos.tech>
+S:	Maintained
+F:	board/modos/nekoink/
+F:	include/configs/nekoink.h
+F:	configs/nekoink_defconfig

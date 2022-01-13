@@ -400,12 +400,15 @@ static const struct mxc_gpio_plat mxc_plat[] = {
 #if defined(CONFIG_MX27) || defined(CONFIG_MX53) || defined(CONFIG_MX6) || \
 		defined(CONFIG_IMX8M) || defined(CONFIG_ARCH_IMX8)
 	{ 4, (struct gpio_regs *)GPIO5_BASE_ADDR },
-#ifndef CONFIG_IMX8M
+#if !(defined(CONFIG_MX6UL) || defined(CONFIG_MX6ULL) || \
+		defined(CONFIG_IMX8M) || defined(CONFIG_IMXRT1050))
 	{ 5, (struct gpio_regs *)GPIO6_BASE_ADDR },
 #endif
 #endif
 #if defined(CONFIG_MX53) || defined(CONFIG_MX6) || defined(CONFIG_ARCH_IMX8)
+#if !(defined(CONFIG_MX6UL) || defined(CONFIG_MX6ULL))
 	{ 6, (struct gpio_regs *)GPIO7_BASE_ADDR },
+#endif
 #endif
 #if defined(CONFIG_ARCH_IMX8)
 	{ 7, (struct gpio_regs *)GPIO8_BASE_ADDR },

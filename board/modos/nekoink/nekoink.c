@@ -318,6 +318,9 @@ static void early_init_pmic(void)
 	// Set LDO3 to 3.3V
 	buf = 104;
 	I2C_WRITE(0x29);
+	// Set USB current limit to unlimited
+	buf = 0x63;
+	I2C_WRITE(0x30);
 	// Read back DCDC2 voltage
 	I2C_READ(0x23);
 	printf("VCORE set to %d mV\n", buf * 25 + 700);
